@@ -32,6 +32,10 @@ sudo apt-get install -y ros-kinetic-desktop-full
 sudo rosdep init
 rosdep update
 
+
+
+
+
 ROS环境搭建：
 
 echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
@@ -64,8 +68,7 @@ echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
 
 echo $ROS_PACKAGE_PATH
 
-一般结果显示如图就表明正常了。否则工作空间的过程再做一遍，保证正确。
-在这里插入图片描述
+
 
 第2步，准备RPLIDAR的ROS驱动包
 先把RPLIDAR的ROS包放在正确的目录下，一般放到src文件夹下
@@ -83,7 +86,7 @@ catkin_make
 
 
 编译完成后，将会生成对应的rplidar的ros node，这样驱动就算到位了。
-在这里插入图片描述
+
 
 第3步，安装雷达
 拿到雷达后，至少会包括一个雷达和一个转接板，A2套装里自带USB线的。
@@ -128,7 +131,6 @@ A3的话直接运行：
 roslaunch rplidar_ros view_rplidar_a3.launch
 
 正常的话就能看到雷达扫描数据显示在rviz界面当中了：
-在这里插入图片描述
 
 可以像通常操作地图一样去操作雷达扫描的那个图，可以放大缩小，移动，调整3D视角等等。
 
